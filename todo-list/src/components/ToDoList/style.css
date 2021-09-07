@@ -1,0 +1,39 @@
+.toDoList {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.toDoList__li {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.toDoList__button {
+  width: 100px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.button {
+  background: orange;
+  color: aliceblue;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 100px;
+  height: 30px;
+  margin-left: 20px;
+  border-radius: 5px;
+  border-style: none;
+}
+
+.button:hover {
+  background: rgb(37, 25, 9);
+}
+
+.button:active {
+  color: rgb(37, 25, 9);
+  transition: 0.3;
+}
