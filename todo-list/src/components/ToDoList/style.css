@@ -6,7 +6,9 @@
 }
 
 .toDoList__li {
+  text-align: start;
   display: flex;
+  height: 50px;
   justify-content: space-between;
   margin-top: 10px;
 }

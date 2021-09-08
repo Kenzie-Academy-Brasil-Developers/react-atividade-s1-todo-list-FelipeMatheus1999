@@ -11,7 +11,7 @@ function App() {
       /** Resolver o problema do handleClick */
     });
 
-    setTodoItem([filteredItems]);
+    setTodoItem([...filteredItems]);
   };
 
   return (
