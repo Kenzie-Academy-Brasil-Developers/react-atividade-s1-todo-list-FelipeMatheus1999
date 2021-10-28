@@ -6,9 +6,9 @@ const ToDoList = ({ todoItens, handleClick }) => {
       {todoItens &&
         todoItens.map((value, index) => {
           return (
-            <li className="toDoList__li">
+            <li key={index} className="toDoList__li">
               {value}
-              <button onClick={handleClick} className="button">
+              <button id={value} onClick={handleClick} className="button">
                 concluded
               </button>
             </li>

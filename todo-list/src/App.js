@@ -6,10 +6,10 @@ import Form from "./components/Form";
 function App() {
   const [todoItens, setTodoItem] = useState([]);
 
-  const handleClick = () => {
-    const filteredItems = todoItens.filter((item) => {
-      /** Resolver o problema do handleClick */
-    });
+  const handleClick = (evt) => {
+    const removedItem = evt.target.id;
+    console.log(removedItem);
+    const filteredItems = todoItens.filter((item) => item !== removedItem);
 
     setTodoItem([...filteredItems]);
   };
@@ -17,12 +17,8 @@ function App() {
   return (
     <div className="App">
       <div className="App-header">
-        <Form
-          todoItens={todoItens}
-          setTodoItem={setTodoItem}
-          handle={handleClick}
-        />
-        <ToDoList todoItens={todoItens} />
+        <Form todoItens={todoItens} setTodoItem={setTodoItem} />
+        <ToDoList todoItens={todoItens} handleClick={handleClick} />
       </div>
     </div>
   );
